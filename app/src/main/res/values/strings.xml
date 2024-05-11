@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">IMCcalculator</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagen_mujer">imagen mujer</string>
+    <string name="mujer">Mujer</string>
+    <string name="altura">ALTURA</string>
+    <string name="height_min">150 cm</string>
+    <string name="selecciona_el_rango_de_valores">Selecciona el rango de valores</string>
+    <string name="hombre">Hombre</string>
+    <string name="imagen_hombre">imagen hombre</string>
+    <string name="peso">PESO</string>
+    <string name="edad">EDAD</string>
+    <string name="tu_resultado">Tu Resultado</string>
+    <string name="text_observation_imc_under_normal">Asegúrate de consumir una dieta equilibrada y nutritiva. Se considera hablar con un profesional de la salud para obtener orientación sobre cómo aumentar de peso de manera saludable.</string>
+    <string name="text_observation_imc_normal">Felicitaciones por mantener un peso saludable. Sigue con hábitos alimenticios y de ejercicio saludables. Mantén un estilo de vida activo y continúa con una dieta equilibrada.</string>
+    <string name="text_observation_imc_over_weight">Considera ajustar tu dieta para incluir más alimentos nutritivos y reducir las calorías vacías. Incrementa tu actividad física para quemar más calorías y mejorar tu salud cardiovascular.</string>
+    <string name="text_observation_imc_obesity_class1">Consulta a un médico o dietista para desarrollar un plan de pérdida de peso seguro y efectivo. Haz cambios en tu estilo de vida, como aumentar la actividad física y reducir el consumo de alimentos altos en calorías y grasas.</string>
+    <string name="text_observation_imc_obesity_class2">Busca apoyo profesional para abordar la obesidad y reducir el riesgo de complicaciones de salud. Considera unirse a un grupo de apoyo o programa de pérdida de peso supervisado por profesionales de la salud.</string>
+    <string name="text_calification_imc_under_normal">Peso inferior al normal</string>
+    <string name="text_calification_imc_normal">Normal</string>
+    <string name="text_calification_imc_over_weight">Peso superior al normal</string>
+    <string name="text_calification_imc_obesity_class1">Obesidad clase I</string>
+    <string name="text_calification_imc_obesity_class2">Obesidad clase II</string>
+    <string name="text_calification_imc_error">ERROR INTRODUCE LOS PARAMETROS CORRECTAMENTE</string>
+</resources>

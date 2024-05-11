@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/imcCalculatorFragment2"
+        android:name="com.example.imccalculator.UI.Main.ImcCalculatorFragment"
+        android:label="fragment_imc_calculator"
+        tools:layout="@layout/fragment_imc_calculator" >
+        <action
+            android:id="@+id/action_imcCalculatorFragment2_to_detailImcFragment"
+            app:destination="@id/detailImcFragment"
+            app:launchSingleTop="false" />
+        <argument
+            android:name="resultImc"
+            app:argType="string"
+            android:defaultValue="21.3" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailImcFragment"
+        android:name="com.example.imccalculator.UI.Main.DetailImcFragment"
+        android:label="fragment_detail_imc"
+        tools:layout="@layout/fragment_detail_imc" >
+        <argument
+            android:name="resultImc"
+            app:argType="string"
+            android:defaultValue="21.3" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.imccalculator.UI.Main.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_imcCalculatorFragment2"
+            app:destination="@id/imcCalculatorFragment2" />
+    </fragment>
+</navigation>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "@color/purple_700"
+    android:orientation="vertical"
+    tools:context=".UI.Main.DetailImcFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/tu_resultado"
+        android:textColor="@color/white"
+        android:textSize="32.dp"
+        android:textStyle="bold"
+        android:layout_marginVertical="8dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_resultImc"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginHorizontal="32dp"
+        android:backgroundTint="@color/background_fragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_calificacionImc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_200"
+                android:textSize="30.dp"
+                android:textStyle="bold"
+                tools:text="NORMAL"
+                android:paddingVertical="16dp"
+                android:textAlignment="center"/>
+
+            <com.ekn.gruzer.gaugelibrary.HalfGauge
+                android:id="@+id/hg_imc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            </com.ekn.gruzer.gaugelibrary.HalfGauge>
+
+            <TextView
+                android:id="@+id/tv_resultImcNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="64.dp"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                tools:text="21.2"
+                android:textAlignment="center"
+                android:paddingVertical="24dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_observationByTheImc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Tu peso es normal"
+                android:textColor="@color/white"
+                android:textSize="16.dp"
+                android:textAlignment="textStart"
+                android:paddingVertical="32dp"
+                android:layout_marginHorizontal="16dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
