@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="woman_image_avatar">women_image</string>
+    <string name="calculateimc">CALCULATE BMI</string>
+    <string name="mujer">woman</string>
+    <string name="woman">Woman</string>
+    <string name="height">HEIGHT</string>
+    <string name="selecciona_el_rango_de_valores">Select range values</string>
+    <string name="hombre">Man</string>
+    <string name="imagen_hombre">image man</string>
+    <string name="peso">WEIGHT</string>
+    <string name="edad">AGE</string>
+    <string name="man">Man</string>
+    <string name="weight">WEIGHT</string>
+    <string name="age">AGE</string>
+    <string name="tu_resultado">Your Result</string>
+    <string name="text_observation_imc_under_normal">Make sure you eat a balanced and nutritious diet. Consider speaking to a health professional for guidance on how to gain weight in a healthy way.</string>
+    <string name="text_observation_imc_normal">Congratulations on maintaining a healthy weight. Continue with healthy eating and exercise habits. Maintain an active lifestyle and continue eating a balanced diet.</string>
+    <string name="text_observation_imc_over_weight">Consider adjusting your diet to include more nutritious foods and reduce empty calories. Increase your physical activity to burn more calories and improve your cardiovascular health.</string>
+    <string name="text_observation_imc_obesity_class1">Consult a doctor or dietitian to develop a safe and effective weight loss plan. Make changes to your lifestyle, such as increasing physical activity and reducing your consumption of high-calorie, high-fat foods.</string>
+    <string name="text_observation_imc_obesity_class2">Seek professional support to address obesity and reduce the risk of health complications. Consider joining a support group or weight loss program supervised by health professionals.</string>
+    <string name="text_calification_imc_under_normal">Underweight</string>
+    <string name="text_calification_imc_normal">Normal</string>
+    <string name="text_calification_imc_over_weight">Weight above normal</string>
+    <string name="text_calification_imc_obesity_class1">Obesity class I</string>
+    <string name="text_calification_imc_obesity_class2">Obesity class II</string>
+    <string name="text_calification_imc_error">ERROR ENTER THE PARAMETERS CORRECTLY</string>
+    <string name="man_image_avatar">man_image</string>
+</resources>

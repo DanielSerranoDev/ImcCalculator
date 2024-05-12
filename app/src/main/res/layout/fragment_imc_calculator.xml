@@ -32,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     android:layout_gravity="bottom"
-                    android:contentDescription="@string/imagen_hombre"
+                    android:contentDescription="@string/man_image_avatar"
                     android:src= "@drawable/icon_male"
                     android:layout_marginTop="20.dp"/>
 
@@ -40,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:text="@string/hombre"
+                    android:text="@string/man"
                     android:textColor="@color/textColors"
                     android:textSize="24sp" />
 
@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
                     android:layout_gravity="bottom"
-                    android:contentDescription="@string/imagen_mujer"
+                    android:contentDescription="@string/woman_image_avatar"
                     android:src= "@drawable/icon_female"
                     android:layout_marginTop="20.dp"
                     />
@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:text="@string/mujer"
+                    android:text="@string/woman"
                     android:textColor="@color/textColors"
                     android:textSize="24sp" />
 
@@ -81,52 +81,61 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_slider"
-            android:layout_width="match_parent"
-            android:layout_height="150.dp"
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
             app:cardBackgroundColor="@color/background_fragment"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="24dp"
 
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="@string/altura"
+                    android:text="@string/height"
                     android:textColor="@color/textColors"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/tv_height"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:text="@string/height_min"
-                    android:textColor="@color/purple_200"
-                    android:textSize="32sp"
-                    android:textStyle="bold" />
+                    android:textSize="24sp"
+                    android:visibility="visible"/>
 
                 <com.google.android.material.slider.RangeSlider
                     android:id="@+id/rs_height"
                     android:layout_width="match_parent"
-                    android:layout_height="20.dp"
-                    android:value = "150.0"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/selecciona_el_rango_de_valores"
+                    android:foregroundTint="@color/teal_200"
+                    android:rotation="270"
+                    android:value="150.0"
                     android:valueFrom="150.0"
                     android:valueTo="220.0"
-                    android:foregroundTint="@color/teal_200"
-                    android:contentDescription="@string/selecciona_el_rango_de_valores"
-                    >
-
-
+                    android:paddingVertical="88dp">
                 </com.google.android.material.slider.RangeSlider>
 
+                <TextView
+                    android:id="@+id/tv_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/height_min"
+                    android:textColor="@color/purple_200"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+
 
             </LinearLayout>
 
@@ -134,154 +143,152 @@
 
         </androidx.cardview.widget.CardView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:layout_marginVertical="24dp"
-        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="18dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_age"
-            app:cardBackgroundColor="@color/background_fragment"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="16dp"
-            app:cardCornerRadius="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/cv_weight"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="@string/edad"
-                    android:textColor="@color/textColors"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/tv_age"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="20 años"
-                    android:textColor="@color/textColorsSecondary"
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_age"
+                app:cardBackgroundColor="@color/background_fragment"
+                android:layout_width="182dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="34dp"
+                android:layout_marginBottom="16dp"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/fb_plusage"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        app:backgroundTint="@color/purple_500"
-                        android:src="@drawable/baseline_add_24"
-                        app:tint="@color/purple_200"
-                        />
+                        android:gravity="center_horizontal"
+                        android:text="@string/age"
+                        android:textColor="@color/textColors"
+                        android:textSize="24sp" />
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/fb_subtrackage"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        app:backgroundTint="@color/purple_500"
-                        android:src="@drawable/baseline_remove_24"
-                        app:tint="@color/purple_200"
-                        />
+                        android:gravity="center_horizontal"
+                        android:text="20 años"
+                        android:textColor="@color/textColorsSecondary"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fb_plusage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            app:backgroundTint="@color/purple_500"
+                            android:src="@drawable/baseline_add_24"
+                            app:tint="@color/purple_200"
+                            />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fb_subtrackage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            app:backgroundTint="@color/purple_500"
+                            android:src="@drawable/baseline_remove_24"
+                            app:tint="@color/purple_200"
+                            />
+
+                    </LinearLayout>
+
+
 
                 </LinearLayout>
 
 
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_weight"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            app:cardBackgroundColor="@color/background_fragment"
-            app:cardCornerRadius="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cv_age"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="@string/peso"
-                    android:textColor="@color/textColors"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/tv_weight"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="60 kg"
-                    android:textColor="@color/textColorsSecondary"
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_weight"
+                android:layout_width="182dp"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/background_fragment"
+                app:cardCornerRadius="24dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fb_plusweight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    app:backgroundTint="@color/purple_500"
-                    android:src="@drawable/baseline_add_24"
-                    app:tint="@color/purple_200"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/weight"
+                        android:textColor="@color/textColors"
+                        android:textSize="24sp" />
 
-                    />
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="60 kg"
+                        android:textColor="@color/textColorsSecondary"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fb_subtrackweight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    app:backgroundTint="@color/purple_500"
-                    android:src="@drawable/baseline_remove_24"
-                    app:tint="@color/purple_200"
-                    />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fb_plusweight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            app:backgroundTint="@color/purple_500"
+                            android:src="@drawable/baseline_add_24"
+                            app:tint="@color/purple_200"
+
+                            />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fb_subtrackweight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            app:backgroundTint="@color/purple_500"
+                            android:src="@drawable/baseline_remove_24"
+                            app:tint="@color/purple_200"
+                            />
+                    </LinearLayout>
+
                 </LinearLayout>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -293,7 +300,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/background_fragment"
-            android:text="CALCULAR"
+            android:text="@string/calculateimc"
             android:textColor="@color/purple_500"
             android:textSize="24.dp"
             android:textStyle="bold"
@@ -301,8 +308,5 @@
 
 
     </LinearLayout>
-
-
-
     <!-- LINEAR LAYOUT EXTERIOR -->
 </LinearLayout>

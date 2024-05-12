@@ -40,8 +40,16 @@ class DetailImcFragment : Fragment() {
 
     private fun listeners() {
 
-        val resultImc = args.resultImc
-        binding.tvResultImcNumber.text = resultImc
+
+        val resultImc = if (args.resultImc.toDouble() > 40.0) {
+            40.0
+        } else if (args.resultImc.toDouble() < 12.0) {
+            12.0
+        } else {
+            args.resultImc.toDouble()
+        }
+
+        binding.tvResultImcNumber.text = resultImc.toString()
 
         binding.hgImc.minValue = 12.0
         binding.hgImc.maxValue = 40.0
@@ -53,7 +61,7 @@ class DetailImcFragment : Fragment() {
         //COLOR DE FONDO
         //binding.hgImc.setGaugeBackGroundColor( resources.getColor(R.color.red))
         //COLOR DE LA AGUJA
-        binding.hgImc.setNeedleColor( resources.getColor(R.color.red))
+        binding.hgImc.setNeedleColor(resources.getColor(R.color.red))
         //COLOR DEL VALOR DEBAJO DE LA AGUJA
         binding.hgImc.valueColor = resources.getColor(R.color.background_fragment)
 
@@ -106,6 +114,7 @@ class DetailImcFragment : Fragment() {
                 binding.tvObservationByTheImc.text =
                     getString(R.string.text_observation_imc_under_normal)
             }
+
             in 18.5..24.99 -> {
                 binding.tvCalificacionImc.text = getString(R.string.text_calification_imc_normal)
                 binding.tvCalificacionImc.setTextColor(resources.getColor(R.color.teal_200))

@@ -54,6 +54,8 @@ class ImcCalculatorFragment : Fragment() {
             isFemaleSelected = true
             setGenderColor()
         }
+
+
         binding.rsHeight.addOnChangeListener { _, value, _ ->
             val df = DecimalFormat("#.#")
             val result = df.format(value)
@@ -61,6 +63,7 @@ class ImcCalculatorFragment : Fragment() {
                 BigDecimal((value / 100).toDouble()).setScale(2, RoundingMode.HALF_UP).toDouble()
             binding.tvHeight.text = "$result cm"
         }
+
 
         binding.fbPlusweight.setOnClickListener {
             currentWeight++
@@ -93,7 +96,7 @@ class ImcCalculatorFragment : Fragment() {
 
     private fun setGenderColor() {
         if (isMaleSelected) {
-            binding.viewMale.setCardBackgroundColor(resources.getColor(R.color.purple_700))
+            binding.viewMale.setCardBackgroundColor(resources.getColor(R.color.purple_200))
             binding.viewFemale.setCardBackgroundColor(resources.getColor(R.color.purple_500))
         } else {
             binding.viewMale.setCardBackgroundColor(resources.getColor(R.color.purple_500))
@@ -130,7 +133,11 @@ class ImcCalculatorFragment : Fragment() {
          */
 
         // Pasando argumentos
-        findNavController().navigate(ImcCalculatorFragmentDirections.actionImcCalculatorFragment2ToDetailImcFragment(resultImc))
+        findNavController().navigate(
+            ImcCalculatorFragmentDirections.actionImcCalculatorFragment2ToDetailImcFragment(
+                resultImc
+            )
+        )
 
     }
 
