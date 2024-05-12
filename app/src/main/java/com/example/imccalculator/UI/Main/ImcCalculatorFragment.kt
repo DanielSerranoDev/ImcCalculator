@@ -22,6 +22,8 @@ class ImcCalculatorFragment : Fragment() {
     private var isFemaleSelected: Boolean = false
     private var currentHeight: Double = 1.50
     private var currentWeight: Int = 60
+
+
     private var currentAge: Int = 20
     private var imc: Double = 0.0
 
@@ -32,6 +34,8 @@ class ImcCalculatorFragment : Fragment() {
 
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +43,10 @@ class ImcCalculatorFragment : Fragment() {
     ): View? {
         _binding = FragmentImcCalculatorBinding.inflate(inflater, container, false)
         initListeners()
+        binding.tvAge.text = currentAge.toString()
+        binding.tvWeight.text = currentWeight.toString()
+
+
         return binding.root
     }
 
@@ -97,10 +105,10 @@ class ImcCalculatorFragment : Fragment() {
     private fun setGenderColor() {
         if (isMaleSelected) {
             binding.viewMale.setCardBackgroundColor(resources.getColor(R.color.purple_200))
-            binding.viewFemale.setCardBackgroundColor(resources.getColor(R.color.purple_500))
+            binding.viewFemale.setCardBackgroundColor(resources.getColor(R.color.background_fragment))
         } else {
-            binding.viewMale.setCardBackgroundColor(resources.getColor(R.color.purple_500))
-            binding.viewFemale.setCardBackgroundColor(resources.getColor(R.color.purple_700))
+            binding.viewMale.setCardBackgroundColor(resources.getColor(R.color.background_fragment))
+            binding.viewFemale.setCardBackgroundColor(resources.getColor(R.color.purple_200))
         }
     }
 
@@ -120,6 +128,7 @@ class ImcCalculatorFragment : Fragment() {
         Log.w("IMC WEIGHT", currentWeight.toString())
         Log.w("IMC HEIGHT", currentHeight.toString())
         Log.w("IMC", imcRounded.toString())
+        Log.w("IMC AGE", currentAge.toString())
 
         return imcRounded.toString()
 
